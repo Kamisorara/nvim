@@ -1,5 +1,5 @@
 return {
-  -- 文件管理器 T 打开
+  -- 文件管理器 T <leader> + e打开
   "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",
   event = "VeryLazy",

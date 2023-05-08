@@ -4,6 +4,9 @@ local function map(mode, lhs, rhs, opts)
   opts.silent = opts.silent ~=false
   vim.keymap.set(mode, lhs, rhs, opts)
 end
+-- 空格绑定leader键
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 -- tt 打开一个10行大小的终端
 map('n', '<leader>wt', '<cmd>below 10sp | term<cr>a', { desc = "mini terminal"})
@@ -15,3 +18,7 @@ map("n", "<leader>w|", "<c-w>v", { desc = "Split window right" })
 map("n", "<leader>-", "<c-w>s", { desc = "Split window below" })
 map("n", "<leader>|", "<c-w>v", { desc = "Split window right" })
 
+-- =========== 插件 =============
+
+-- ===lazy===
+map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Lazy"})

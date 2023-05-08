@@ -1,6 +1,6 @@
 local vim = vim
 if vim.g.neovide then
-  vim.opt.guifont = { "JetBrains Mono NL", "h10" }
+  vim.opt.guifont = { "JetBrains Mono:h12" }
   -- 模糊半径
   vim.g.neovide_floating_blur_amount_x = 2.0
   vim.g.neovide_floating_blur_amount_y = 2.0

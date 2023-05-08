@@ -1,6 +1,9 @@
 local G = require('G')
 local g = vim.g
 local opt = vim.opt
+-- <leader> 键 映射为空格
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 --- 基础配置
 opt.encoding = "utf-8"
 opt.autowrite = true --  启用自动写入
