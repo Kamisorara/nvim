@@ -23,6 +23,8 @@ return {
       'coc-git',
       'coc-yank',
     }
+    -- 光标定义到某个单词时，高亮显示
+    G.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
     G.cmd("command! -nargs=? Fold :call CocAction('fold', <f-args>)")
     G.cmd("hi! link CocPum Pmenu")
     G.cmd("hi! link CocMenuSel PmenuSel")
