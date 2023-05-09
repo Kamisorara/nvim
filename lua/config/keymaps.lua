@@ -18,6 +18,8 @@ map("n", "<leader>w|", "<c-w>v", { desc = "Split window right" })
 map("n", "<leader>-", "<c-w>s", { desc = "Split window below" })
 map("n", "<leader>|", "<c-w>v", { desc = "Split window right" })
 
+-- 取消高亮
+map({"i","n"}, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and clear hlsearch" })
 -- =========== 插件 =============
 
 -- ===lazy===
