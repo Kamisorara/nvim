@@ -9,3 +9,11 @@ vim.api.nvim_create_autocmd({ "BufEnter" }, {
             + "r" -- But do continue when pressing enter.
     end,
 })
+
+-- 自动保存
+-- vim.api.nvim_create_autocmd({ "InsertLeave" }, {
+--     callback = function()
+--         vim.fn.execute("silent! write")
+--         vim.notify("Autosaved!", vim.log.levels.INFO, {})
+--     end,
+-- })

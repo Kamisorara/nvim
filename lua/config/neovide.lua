@@ -1,11 +1,12 @@
 local vim = vim
-if vim.g.neovide then
+if vim.g.neovide 
+then
   vim.opt.guifont = { "JetBrains Mono:h12" }
   -- 模糊半径
   vim.g.neovide_floating_blur_amount_x = 2.0
   vim.g.neovide_floating_blur_amount_y = 2.0
   -- 透明度
-  vim.g.neovide_transparency = 0.9
+  vim.g.neovide_transparency = 1
   -- 滚动动画长度
   vim.g.neovide_scroll_animation_length = 0.3
   -- 打字时隐藏鼠标
@@ -44,13 +45,15 @@ if vim.g.neovide then
   -- === 光标粒子
   -- 电磁炮|railgun  鱼雷|torpedo  仙尘|pixiedust
   -- 音爆|sonicboom  波纹|ripple  线框|wireframe
-  vim.g.neovide_cursor_vfx_mode = "ripple"
+  -- vim.g.neovide_cursor_vfx_mode = "ripple"
   -- -- 粒子不透明度
-  vim.g.neovide_cursor_vfx_opacity = 200.0
+  -- vim.g.neovide_cursor_vfx_opacity = 200.0
   -- -- 粒子寿命
-  vim.g.neovide_cursor_vfx_particle_lifetime = 10
+  -- vim.g.neovide_cursor_vfx_particle_lifetime = 10
   -- -- 粒子密度
-  vim.g.neovide_cursor_vfx_particle_density = 10.0
+  -- vim.g.neovide_cursor_vfx_particle_density = 10.0
   -- -- 粒子速度
-  vim.g.neovide_cursor_vfx_particle_speed = 10
+  -- vim.g.neovide_cursor_vfx_particle_speed = 10
 end
+
+
