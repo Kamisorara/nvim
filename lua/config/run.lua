@@ -4,7 +4,7 @@ vim.api.nvim_create_autocmd("FileType", {
   callback = function()
     vim.api.nvim_buf_set_keymap(
       0, "n", "<F5>",
-      ":!g++ % -o %<.out <CR>:!%<.out < in<CR>",
+      ":!g++ % -o %<.out <CR>:!%<.out < in > out<CR>",
       { silent = true, noremap = true }
     )
   end

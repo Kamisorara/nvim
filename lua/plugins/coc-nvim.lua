@@ -22,6 +22,7 @@ return {
       'coc-translator',
       'coc-git',
       'coc-yank',
+      'coc-highlight',
     }
     -- 光标定义到某个单词时，高亮显示
     G.cmd("autocmd CursorHold * silent call CocActionAsync('highlight')")
@@ -45,8 +46,8 @@ return {
       { 'o', 'ac',    '<Plug>(coc-classobj-a)',                { silent = true } },
       { 'n', 'K',     ':call CocAction("doHover")<cr>',        { silent = true } },
       { 'i', '<c-f>', "coc#pum#visible() ? '<c-y>' : '<c-f>'", { silent = true, expr = true } },
-      { 'i', '<TAB>',
-        "coc#pum#visible() ? coc#pum#next(1) : col('.') == 1 || getline('.')[col('.') - 2] =~# '\\s' ? \"\\<TAB>\" : coc#refresh()",
+      { 'i', '<tab>',
+        "coc#pum#visible() ? coc#pum#next(1) : col('.') == 1 || getline('.')[col('.') - 2] =~# '\\s' ? \"\\<tab>\" : coc#refresh()",
         { silent = true, noremap = true, expr = true } },
       { 'i', '<s-tab>', "coc#pum#visible() ? coc#pum#prev(1) : \"\\<s-tab>\"",
         { silent = true, noremap = true, expr = true } },

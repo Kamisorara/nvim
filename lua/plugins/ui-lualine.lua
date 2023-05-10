@@ -212,7 +212,7 @@ ins_right({
   symbols = {
     -- 
     unix = " Linux", -- e712
-    dos = " Windos", -- e70f
+    dos = " Windows", -- e70f
     mac = " Mac", -- e711
   },
   color = { fg = colors.custom, gui = "bold" },
