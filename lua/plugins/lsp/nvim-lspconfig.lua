@@ -73,6 +73,7 @@ local servers = {
   "jsonls",
   "emmet_ls",
   "tailwindcss",
+  "jdtls",
 }
 
 for _, lsp in ipairs(servers) do

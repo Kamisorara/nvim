@@ -16,6 +16,7 @@ mason_lspconfig.setup({
     "jsonls",
     "emmet_ls",
     "tailwindcss",
+    "jdtls",
   },
   automatic_installation = false,
 })
