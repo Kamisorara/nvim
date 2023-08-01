@@ -1,16 +1,20 @@
-require('config.options')       -- 基础配置
-require('config.lazy')          -- 运行基础配置
-require('config.autocmds')      -- 自动运行
-require('config.keymaps')       -- 快捷键
-require('config.neovide')       -- neovide gui配置
-require('config.run')           -- 程序运行
+require('craftzdog.base')
+require('craftzdog.highlights')
+require('craftzdog.maps')
+require('craftzdog.plugins')
+require('craftzdog.run')
 
--- lsp
-require('plugins.lsp.nvim-lspconfig')
-require('plugins.lsp.mason')
-require('plugins.lsp.mason-lspconfig')
-require('plugins.lsp.null-ls')
+local has = vim.fn.has
+local is_mac = has "macunix"
+local is_win = has "win32"
+local is_wsl = has "wsl"
 
--- complement
-require('plugins.lsp.nvim-cmp')
-require('plugins.lsp.luasnip')
+if is_mac == 1 then
+    require('craftzdog.macos')
+end
+if is_win == 1 then
+    require('craftzdog.windows')
+end
+if is_wsl == 1 then
+    require('craftzdog.wsl')
+end
