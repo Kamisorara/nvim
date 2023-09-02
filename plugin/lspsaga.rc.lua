@@ -2,18 +2,18 @@ local status, saga = pcall(require, "lspsaga")
 if (not status) then return end
 
 saga.setup({
-  ui = {
-    border = 'rounded',
-  },
-  symbol_in_winbar = {
-    enable = false
-  },
-  lightbulb = {
-    enable = false
-  },
-  outline = {
-    layout = 'float'
-  }
+    ui = {
+        border = 'rounded',
+    },
+    symbol_in_winbar = {
+        enable = false
+    },
+    lightbulb = {
+        enable = false
+    },
+    outline = {
+        layout = 'float'
+    }
 })
 
 local diagnostic = require("lspsaga.diagnostic")

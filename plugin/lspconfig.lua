@@ -1,5 +1,4 @@
 --vim.lsp.set_log_level("debug")
-
 local status, nvim_lsp = pcall(require, "lspconfig")
 if (not status) then return end
 
@@ -72,10 +71,26 @@ nvim_lsp.flow.setup {
     capabilities = capabilities
 }
 
+-- typescript
 nvim_lsp.tsserver.setup {
     on_attach = on_attach,
-    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
     cmd = { "typescript-language-server", "--stdio" },
+    capabilities = capabilities
+}
+--
+-- nvim_lsp.clangd.setup {
+--     on_attach = on_attach,
+--     filetypes = { "cpp" },
+--     cmd = { "clangd", "--stdio" },
+--     capabilities = capabilities
+-- }
+
+-- python
+nvim_lsp.pyright.setup {
+    on_attach = on_attach,
+    filetypes = { "python" },
+    cmd = { "pyright-langserver", "--stdio" },
     capabilities = capabilities
 }
 
@@ -84,6 +99,7 @@ nvim_lsp.sourcekit.setup {
     capabilities = capabilities,
 }
 
+-- lua
 nvim_lsp.lua_ls.setup {
     capabilities = capabilities,
     on_attach = function(client, bufnr)
@@ -116,10 +132,10 @@ nvim_lsp.cssls.setup {
     capabilities = capabilities
 }
 
-nvim_lsp.astro.setup {
-    on_attach = on_attach,
-    capabilities = capabilities
-}
+-- nvim_lsp.astro.setup {
+--     on_attach = on_attach,
+--     capabilities = capabilities
+-- }
 
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics, {
