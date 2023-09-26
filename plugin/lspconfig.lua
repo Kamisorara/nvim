@@ -16,6 +16,8 @@ local enable_format_on_save = function(_, bufnr)
     })
 end
 
+
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -27,7 +29,6 @@ local on_attach = function(client, bufnr)
 
     -- Mappings.
     local opts = { noremap = true, silent = true }
-
     -- See `:help vim.lsp.*` for documentation on any of the below functions
     buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
     --buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -73,7 +74,10 @@ nvim_lsp.flow.setup {
 
 -- typescript
 nvim_lsp.tsserver.setup {
-    on_attach = on_attach,
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        enable_format_on_save(client, bufnr)
+    end,
     filetypes = { "typescript", "typescriptreact", "typescript.tsx", "javascript", "javascriptreact", "javascript.jsx" },
     cmd = { "typescript-language-server", "--stdio" },
     capabilities = capabilities
@@ -88,9 +92,23 @@ nvim_lsp.tsserver.setup {
 
 -- python
 nvim_lsp.pyright.setup {
-    on_attach = on_attach,
+    capabilities = capabilities,
+    -- auto format
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        enable_format_on_save(client, bufnr)
+    end,
     filetypes = { "python" },
-    cmd = { "pyright-langserver", "--stdio" },
+    cmd = { "pyright-langserver", "--stdio" }
+}
+
+-- html
+nvim_lsp.html.setup {
+    on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        enable_format_on_save(client, bufnr)
+    end,
+    filetypes = { "html" },
     capabilities = capabilities
 }
 

@@ -1,13 +1,13 @@
 local status, bufferline = pcall(require, "bufferline")
 if (not status) then return end
-
+vim.opt.termguicolors = true
 bufferline.setup({
     options = {
-        mode = "tabs",
+        mode = "buffers",
         separator_style = 'slant',
-        always_show_bufferline = false,
-        show_buffer_close_icons = false,
-        show_close_icon = false,
+        always_show_bufferline = true,
+        show_buffer_close_icons = true,
+        show_close_icon = true,
         color_icons = true
     },
     highlights = {
