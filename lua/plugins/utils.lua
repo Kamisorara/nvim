@@ -47,7 +47,7 @@ utils.about = function()
     render("", 3)
     render("Author: Kamisora", 4)
     render("", 5)
-    render("Url: https://github.com/Shaobin-Jiang/IceNvim", 6)
+    render("Url: https://github.com/Kamisorara/nvim", 6)
     render("", 7)
     render(string.format("Copyright © 2024-%s Kamisora", os.date "%Y"), 8)
 
