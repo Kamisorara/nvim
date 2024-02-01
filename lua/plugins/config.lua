@@ -191,7 +191,7 @@ config.dashboard = {
                     action = "lua require('plugins.utils').about()",
                 },
             },
-            footer = { "🧊 Hope that you enjoy using KamisoraNvim 😀😀😀" },
+            footer = { "💻🛰️🛸 Hope that you enjoy using KamisoraNvim 🎮👾🕹️" },
         },
     },
     config = function(_, opts)
