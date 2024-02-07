@@ -32,6 +32,8 @@ lsp.ensure_installed = {
     "prettier",
     "shfmt",
     "stylua",
+    "isort",
+    "black",
 }
 
 lsp.servers = {

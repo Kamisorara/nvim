@@ -1237,6 +1237,7 @@ config["conform"] = {
                 yaml = { "prettierd" },
                 markdown = { "prettierd" },
                 graphql = { "prettierd" },
+                python = { "isort", "black" },
             },
             -- 保存自动格式化
             format_on_save = {
