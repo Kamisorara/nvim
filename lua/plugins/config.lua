@@ -191,7 +191,7 @@ config.dashboard = {
                     action = "lua require('plugins.utils').about()",
                 },
             },
-            footer = { "💻🛰️🛸 Hope that you enjoy using KamisoraNvim 🎮👾🕹️" },
+            footer = { "🧊🧊🧊 Hope that you enjoy using KamisoraNvim 🎮👾🕹️" },
         },
     },
     config = function(_, opts)
@@ -1344,23 +1344,23 @@ config.lspsaga = {
 }
 
 -- lint配置
-config["nvim-lint"] = {
-    "mfussenegger/nvim-lint",
-    event = "VeryLazy",
-    config = function()
-        require("lint").linters_by_ft = {
-            javascript = { "eslint_d" },
-            typescript = { "eslint_d" },
-            javascriptreact = { "eslint_d" },
-            typescriptreact = { "eslint_d" },
-        }
-        vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
-            callback = function()
-                require("lint").try_lint()
-            end,
-        })
-    end,
-}
+-- config["nvim-lint"] = {
+--     "mfussenegger/nvim-lint",
+--     event = "VeryLazy",
+--     config = function()
+--         require("lint").linters_by_ft = {
+--             javascript = { "eslint_d" },
+--             typescript = { "eslint_d" },
+--             javascriptreact = { "eslint_d" },
+--             typescriptreact = { "eslint_d" },
+--         }
+--         vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
+--             callback = function()
+--                 require("lint").try_lint()
+--             end,
+--         })
+--     end,
+-- }
 
 Kamisora.plugins = config
 Kamisora.keymap.prefix = {
