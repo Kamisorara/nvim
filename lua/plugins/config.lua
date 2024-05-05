@@ -11,6 +11,7 @@ local priority = {
 
 config.bufferline = {
     "akinsho/bufferline.nvim",
+    version = "v4.4.1",
     lazy = false,
     dependencies = {
         "nvim-tree/nvim-web-devicons",
@@ -359,6 +360,9 @@ config.neogit = {
 
 config.neorg = {
     "nvim-neorg/neorg",
+    dependencies = {
+        "vhyrro/luarocks.nvim",
+    },
     -- Do not set ft = "norg", as we might want to access to neorg functions prior to entering a norg file
     event = "VeryLazy",
     main = "neorg",
@@ -1212,7 +1216,7 @@ config["null-ls"] = {
                     extra_filetypes = { "njk" },
                     prefer_local = "node_modules/.bin",
                 },
-                formatting.autopep8,
+                -- formatting.autopep8,
             },
             diagnostics_format = "[#{s}] #{m}",
         }
