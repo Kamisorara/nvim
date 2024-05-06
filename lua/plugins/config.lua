@@ -360,6 +360,7 @@ config.neogit = {
 
 config.neorg = {
     "nvim-neorg/neorg",
+    version = "v7.0.0",
     dependencies = {
         "vhyrro/luarocks.nvim",
     },
